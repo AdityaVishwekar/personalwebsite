@@ -1,0 +1,17 @@
+{
+	"text": [
+		{	
+			"projectDescription1":"Online shopping is becoming more and more important because of internet and the amount of user-generated content it contains in the form of reviews. Therefore, it is necessary to design effective system to summarize the result of review in the form of knowledge. The summarization of pros and cons of product characteristics helps consumers to quickly find their product. In this paper, we present a review of product ranking system using opinion-mining techniques. The user can specify product and desired feature to get the targeted ranking result of products. "
+		}
+	],
+	"text1": [
+		{
+			"projectDescription2":"This application is implemented using hadoop and core java. Average temperature and wind for each weather-station is calculated for the period of 5 years. Data is forked based on the months for each year."
+		}
+	],
+	"text2": [
+		{
+			"projectDescription3":"Server sockets use the ServerSocket object rather than the Socket object that client sockets use. There are several constructors available with the ServerSocket object. The simplest constructor accepts only the port number on which the program should be listening. Listening refers to the mode that a server is in while it waits for clients to connect."		
+		}
+	]
+}
