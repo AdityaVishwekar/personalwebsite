@@ -5,7 +5,7 @@
   <title>Aditya Vishwekar</title>
 <!--   Hello!! Welcome to my website..Now lets go check the code below..-->  
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
@@ -14,6 +14,7 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+
   <script> 
   var app = angular.module('myProjects',['ngAnimate']); 
   </script>
@@ -37,9 +38,9 @@
         <li><a href="#projects">PROJECTS</a></li>
         <li><a href="#aboutme">ABOUT ME</a></li>
         <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#blog">BLOG</a></li>
         <li><a href="#games">GAMES</a></li>
         </li>
-        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
       </ul>
     </div>
   </div>
@@ -56,21 +57,21 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img class="img-responsive" src="https://media.giphy.com/media/3o6EhHf3xajwOQzi9y/giphy.gif" alt="New York" width="1200" height>
+        <img class="img-responsive" src="https://media.giphy.com/media/3o6EhHf3xajwOQzi9y/giphy.gif" alt="New York">
         <div class="carousel-caption">
           <h3>Designer & Developer</h3>
         </div>      
       </div>
 
       <div class="item">
-        <img src="images/logo2.jpg" alt="Chicago" width="1200" height="700">
+        <img class="img-responsive" src="images/logo2.jpg" alt="Chicago">
         <div class="carousel-caption">
           <h3>Tester</h3>
         </div>      
       </div>
     
       <div class="item">
-        <img src="images/logo3.jpg" alt="Los Angeles" width="1200" height="700">
+        <img class="img-responsive" src="images/logo3.jpg" alt="Los Angeles">
         <div class="carousel-caption">
           <h3>Programmer</h3>
         </div>      
@@ -95,7 +96,7 @@
     <div class="col-sm-4">
       <h3>Product Ranking</h3>
       <div id="parent">
-        <button>Description</button>
+        <button name="button" class="btn btn-info btn-responsive">Description</button>
         <div id="popup" style="display: none"><p id="pd1" align="justify"></p>
         </div>
       </div>
@@ -104,7 +105,7 @@
     <div class="col-sm-4"> 
       <h3>Weather Analysis</h3>
         <div id="parent1">
-        <button>Description</button>
+        <button name="button" class="btn btn-info btn-responsive">Description</button>
           <div id="popup1" style="display: none"><p id="pd2" align="justify"></p>
           </div>
       </div>
@@ -113,13 +114,42 @@
     <div class="col-sm-4"> 
      <h3>Mini Web-Server</h3>
         <div id="parent2">
-        <button>Description</button>
+        <button name="button" class="btn btn-info btn-responsive">Description</button>
           <div id="popup2" style="display: none"><p id="pd3" align="justify"></p>
           </div>
       </div>
       <a target="_blank" href="https://github.com/AdityaVishwekar/Web-Server/tree/master/CNProject1">GitHub</a>
     </div>
   </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Transaction Manager</h3>
+      <div id="parent3">
+        <button name="button" class="btn btn-info btn-responsive">Description</button>
+        <div id="popup3" style="display: none"><p id="pd4" align="justify"></p>
+        </div>
+      </div>
+      <a target="_blank" href="https://github.com/AdityaVishwekar/DB-Transaction-Manager">GitHub</a>
+    </div>
+    <div class="col-sm-4"> 
+      <h3>Hostel DB-System</h3>
+        <div id="parent4">
+        <button name="button" class="btn btn-info btn-responsive">Description</button>
+          <div id="popup4" style="display: none"><p id="pd5" align="justify"></p>
+          </div>
+      </div>
+      <a target="_blank" href="https://github.com/AdityaVishwekar/HostelDBSystem">GitHub</a>
+    </div>
+    <div class="col-sm-4"> 
+     <h3>FI-Portal Automation</h3>
+        <div id="parent5">
+        <button name="button" class="btn btn-info btn-responsive">Description</button>
+          <div id="popup5" style="display: none"><p id="pd6" align="justify"></p>
+          </div>
+      </div>
+      <a target="_blank" href="https://github.com/AdityaVishwekar/FIPortalAutomation">GitHub</a>
+    </div>
+  </div>  
 </div>
 
 
@@ -127,27 +157,18 @@
 <div id="aboutme" class="bg-1">
   <div class="container">
     <h3 class="text-center">About Me</h3>
-    <p class="text-center">Freelancer<br>Web Developer at CoHost.Me-Startup<br> Pursuing Masters in Computer Science<br>Love Traveling and eating different cuisines</p>
-    
-    <div class="row">
-      <div class="col-md-4">
-          <img class="img-responsive" src="images/paris.jpg" alt="Paris" >
-          <p><strong>Paris</strong></p>
+        <div class="row">
+      <div class="col-md-8">
+        <p id="few-words"> FEW WORDS </p>
+        <p id="intro">I'm Aditya Vishwekar, software engineer and designer, working in web development and database design. If you have a project that needs to be professional engineered then that’s where I come in! <br>
+        My job is to build your website or software so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My goal is to help you succed in respective venture.
+        </p>
       </div>
-      <div class="col-md-4">
-          <img class="img-responsive" src="images/singapore.jpg" alt="Singapore" >
-          <p><strong>Singapore</strong></p>
+        <div class="col-md-4">
+              <img class="img-responsive" class="bottom" src="images/logo.gif" alt="DisplayImage" />
+        </div>
       </div>
-      <div class="col-md-4">
-          <img class="img-responsive" src="images/milan.jpg" alt="Milan">
-          <p><strong>Milan</strong></p>
-      </div>
-    </div>
-</div>
-</div>
-
-  
-
+  </div>
 </div>
 
 <!-- Container (Contact Section) -->
@@ -179,37 +200,29 @@
     </div>
   </div>
   <br>
-  <h3 class="text-center">From The Blog</h3> 
-   <h4 class="text-center">Coming Soon</h4> 
 </div>
 
-<div id="googleMap"></div>
+<!-- Container (Blog Section) -->
+<div id="blog" class="container-fluid">
+  <h3 class="text-center">Blog</h3>
 
-<!-- Add Google Maps -->
-<script src="http://maps.googleapis.com/maps/api/js"></script>
-<script>
-var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+  <div class="col-md-12">
+    <iframe src="http://techtraveladitya.blogspot.com" class="col-md-12" style="border:none;"></iframe>
+  </div>
+  <br>
 
-function initialize() {
-var mapProp = {
-center:myCenter,
-zoom:12,
-scrollwheel:false,
-draggable:false,
-mapTypeId:google.maps.MapTypeId.ROADMAP
-};
+</div>
 
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-var marker = new google.maps.Marker({
-position:myCenter,
-});
-
-marker.setMap(map);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
+<!-- Container (Game Section) -->
+<div id="games" class="container" >
+  <h3 class="text-center">Games</h3>
+  <div class="col-md-6">
+    <iframe src="game.html" class="col-md-12" style="border:none;"></iframe>
+  </div>
+    <div class="col-md-6">
+    <iframe src="game.html" class="col-md-12" style="border:none;"></iframe>
+  </div>
+</div>
 
 <!-- Footer -->
 <footer class="text-center">
@@ -256,6 +269,9 @@ $(function() {
   var text = [];
   var text1 = [];
   var text2 = [];
+  var text3 = [];
+  var text4 = [];
+  var text5 = [];
    $.getJSON('data.json', function(data) {
        $.each(data.text, function(i, f) {
           document.getElementById("pd1").innerHTML = f.projectDescription1;
@@ -267,6 +283,18 @@ $(function() {
 
         $.each(data.text2, function(i, f) {
           document.getElementById("pd3").innerHTML = f.projectDescription3;
+     });
+
+       $.each(data.text3, function(i, f) {
+          document.getElementById("pd4").innerHTML = f.projectDescription4;
+     });
+
+       $.each(data.text4, function(i, f) {
+          document.getElementById("pd5").innerHTML = f.projectDescription5;
+     });
+
+        $.each(data.text5, function(i, f) {
+          document.getElementById("pd6").innerHTML = f.projectDescription6;
      });
 
    });
