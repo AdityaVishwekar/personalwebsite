@@ -18,6 +18,14 @@
   <script> 
   var app = angular.module('myProjects',['ngAnimate']); 
   </script>
+<script>
+function disableScrolling() {
+    document.body.style.overflow = 'hidden';
+}
+function enableScrolling() {
+    document.body.style.overflow = 'scroll';
+}
+</script>
 
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -91,7 +99,7 @@
 
 <!-- Container (The projects Section) -->
 <div id="projects" class="container text-center" ng-app="myProjects">
-  <h1>Projects</h1>   
+  <h2>Projects</h2>   
   <div class="row">
     <div class="col-sm-4">
       <h3>Product Ranking</h3>
@@ -160,7 +168,7 @@
         <div class="row">
       <div class="col-md-8">
         <p id="few-words"> FEW WORDS </p>
-        <p id="intro">I'm Aditya Vishwekar, software engineer and designer, working in web development and database design. If you have a project that needs to be professional engineered then that’s where I come in! <br>
+        <p id="intro">I'm Aditya Vishwekar, software engineer and designer, working in web development and database design. If you have a project that needs professional engineering then that’s where I come in! <br>
         My job is to build your website or software so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My goal is to help you succed in respective venture.
         </p>
       </div>
@@ -183,21 +191,31 @@
     </div>
     <div class="col-md-8">
       <div class="row">
+      <form name="contactform" method="post">
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          <input class="form-control" id="first_name" name="first_name" placeholder="First Name" type="text" required>
         </div>
         <div class="col-sm-6 form-group">
           <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+            <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="last_name" name="last_name" placeholder="Last Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="telephone" name="telephone" placeholder="Telephone" type="telephone" required>
         </div>
       </div>
       <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
       <br>
       <div class="row">
         <div class="col-md-12 form-group">
-          <button class="btn pull-right" type="submit">Send</button>
+          <button class="btn pull-right" id="submit" type="submit" onclick="submit();">Send</button>
         </div>
       </div>
     </div>
+    </form>
   </div>
   <br>
 </div>
@@ -214,13 +232,26 @@
 </div>
 
 <!-- Container (Game Section) -->
-<div id="games" class="container" >
+<div id="games" class="container-fluid" >
   <h3 class="text-center">Games</h3>
-  <div class="col-md-6">
-    <iframe src="game.html" class="col-md-12" style="border:none;"></iframe>
+  <div class="row">
+    <div class="col-sm-6">
+      <button id="scrollingEnable" class="btn btn-warning btn-primary btn-block" onclick="disableScrolling()">Disable Scrolling</button>
+    </div>
+    <div class="col-sm-6">
+      <button id="scrollingDisable" class="btn btn-warning btn-primary btn-block" onclick="enableScrolling()">Enable Scrolling</button>
+    </div>
   </div>
-    <div class="col-md-6">
-    <iframe src="game.html" class="col-md-12" style="border:none;"></iframe>
+  <div class="row" id="game-row">
+    <div class="col-md-8">
+      <iframe id="game1" src="http://hexgl.bkcore.com/play/" class="col-md-12" style="border:none;"></iframe>
+    </div>
+    <div class="col-md-4">
+      <iframe src="http://www.cross-code.com/en/start">
+        
+      </iframe>
+    </div>
+  </div>
   </div>
 </div>
 
@@ -300,5 +331,36 @@ $(function() {
    });
 
 });
+
+$(document).ready(function(){
+$("#submit").click(function(){
+var first_name = $("#first_name").val();
+var last_name = $("#last_name").val();
+var email = $("#email").val();
+var telephone = $("#telephone").val();
+var comments = $("#comments").val();
+// Returns successful data submission message when the entered information is stored in database.
+var dataString = 'first_name='+ first_name + '&last_name='+ last_name  + '&email='+ email + '&telephone='+ telephone + '&comments='+ comments;
+if(first_name==''||last_name==''||email==''||telephone==''||comments=='')
+{
+alert("Please Fill All Fields");
+}
+else
+{
+// AJAX Code To Submit Form.
+$.ajax({
+type: "POST",
+url: "send_form_email.php",
+data: dataString,
+cache: false,
+success: function(result){
+alert(result);
+}
+});
+}
+return false;
+});
+});
+
 </script>
 </html>

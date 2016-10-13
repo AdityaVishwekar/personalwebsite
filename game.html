@@ -33,6 +33,9 @@ var myGameArea = {
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 20);
         },
+    stop : function() {
+        clearInterval(this.interval);
+    },
     clear : function() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
@@ -131,6 +134,7 @@ function accelerate(n) {
 </script>
 <br>
 <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
+<button onclick="history.go(0)">RESTART</button>
 <p>Use the ACCELERATE button to stay in the air</p>
 <p>How long can you stay alive?</p>
 </body>
