@@ -1,6 +1,7 @@
  body {
       font: 400 15px/1.8 Lato, sans-serif;
       color: #777;
+      float: center;
   }
   h3, h4 {
       margin: 10px 0 30px 0;
@@ -202,6 +203,6 @@ canvas {
     background-color: #f1f1f1;
 }
 
-#game-row {
+/*#game-row {
   width: 110%;
-}
+}*/

@@ -168,7 +168,7 @@ function enableScrolling() {
         <div class="row">
       <div class="col-md-8">
         <p id="few-words"> FEW WORDS </p>
-        <p id="intro">I'm Aditya Vishwekar, software engineer and designer, working in web development and database design. If you have a project that needs professional engineering then that’s where I come in! <br>
+        <p id="intro">I'm Aditya Vishwekar, software engineer and designer, working in web development and database design. If you have a project that needs to be professional engineered then that’s where I come in! <br>
         My job is to build your website or software so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My goal is to help you succed in respective venture.
         </p>
       </div>
@@ -234,24 +234,16 @@ function enableScrolling() {
 <!-- Container (Game Section) -->
 <div id="games" class="container-fluid" >
   <h3 class="text-center">Games</h3>
-  <div class="row">
-    <div class="col-sm-6">
-      <button id="scrollingEnable" class="btn btn-warning btn-primary btn-block" onclick="disableScrolling()">Disable Scrolling</button>
+      <div class="alert alert-info">
+      <center><strong>Info!</strong>Please disable the scrolling to play games!! (You can find disable button at the end of page).</center>
     </div>
-    <div class="col-sm-6">
-      <button id="scrollingDisable" class="btn btn-warning btn-primary btn-block" onclick="enableScrolling()">Enable Scrolling</button>
-    </div>
-  </div>
   <div class="row" id="game-row">
     <div class="col-md-8">
       <iframe id="game1" src="http://hexgl.bkcore.com/play/" class="col-md-12" style="border:none;"></iframe>
     </div>
     <div class="col-md-4">
-      <iframe src="http://www.cross-code.com/en/start">
-        
-      </iframe>
+      <iframe src="http://www.cross-code.com/en/start" style="border:none;"></iframe>
     </div>
-  </div>
   </div>
 </div>
 
@@ -259,7 +251,11 @@ function enableScrolling() {
 <footer class="text-center">
   <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
     <span class="glyphicon glyphicon-chevron-up"></span>
-  </a><br><br>
+  </a><br>
+    <div class="btn-group">
+        <button id="scrollingEnable" type="button" class="btn btn-primary" onclick="disableScrolling()">Disable Scrolling</button>
+        <button id="scrollingDisable" type="button" class="btn btn-primary" onclick="enableScrolling()">Enable Scrolling</button>
+  </div>
 </footer>
 
 <script>
