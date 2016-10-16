@@ -173,10 +173,10 @@ iframe {
 
 .col-md-4 img {
   border: 1px solid white;
-  background-color: blue;
-  padding: 10px;
   height: auto;
   width: auto;
+
+
 }
 @font-face {
    font-family: myFirstFont;
@@ -203,6 +203,38 @@ canvas {
     background-color: #f1f1f1;
 }
 
-/*#game-row {
-  width: 110%;
-}*/
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+center {
+  color: red;
+}
+
+.col-sm-4 h3:hover {
+  color: red;
+}
+
+#barGraph {
+  float: left;
+}
+
+.floating-box {
+    display: inline-block;
+    float: center;
+}
+
+.floating-box:hover {
+  font-size: 150%;
+}

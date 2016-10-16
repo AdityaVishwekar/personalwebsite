@@ -6,26 +6,68 @@
 <!--   Hello!! Welcome to my website..Now lets go check the code below..-->  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="css/build.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
 
-  <script> 
-  var app = angular.module('myProjects',['ngAnimate']); 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script> var app = angular.module('myProjects',['ngAnimate']); </script>
+  <script>
+  function disableScrolling() {
+      document.body.style.overflow = 'hidden';
+  }
+
+  function enableScrolling() {
+      document.body.style.overflow = 'scroll';
+       window.my_mute = true;
+  }
+  <!--
+  var x,y,n=0,ny=0,rotINT,rotYINT
+  function rotateDIV()
+  {
+  x=document.getElementById("rotate2D")
+  clearInterval(rotINT)
+  rotINT=setInterval("startRotate()",10)
+  }
+  function rotateYDIV()
+  {
+  y=document.getElementById("rotate3D")
+  clearInterval(rotYINT)
+  rotYINT=setInterval("startYRotate()",10)
+  }
+  function startRotate()
+  {
+  n=n+1
+  x.style.transform="rotate(" + n + "deg)"
+  x.style.webkitTransform="rotate(" + n + "deg)"
+  x.style.OTransform="rotate(" + n + "deg)"
+  x.style.MozTransform="rotate(" + n + "deg)"
+  if (n==180 || n==360)
+  {
+  clearInterval(rotINT)
+  if (n==360){n=0}
+  }
+  }
+  function startYRotate()
+  {
+  ny=ny+1
+  y.style.transform="rotateY(" + ny + "deg)"
+  y.style.webkitTransform="rotateY(" + ny + "deg)"
+  y.style.OTransform="rotateY(" + ny + "deg)"
+  y.style.MozTransform="rotateY(" + ny + "deg)"
+  if (ny==180 || ny>=360)
+  {
+  clearInterval(rotYINT)
+  if (ny>=360){ny=0}
+  }
+  }
+  //-->
   </script>
-<script>
-function disableScrolling() {
-    document.body.style.overflow = 'hidden';
-}
-function enableScrolling() {
-    document.body.style.overflow = 'scroll';
-}
-</script>
+
 
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -163,18 +205,45 @@ function enableScrolling() {
 
 <!-- Container (aboutme Section) -->
 <div id="aboutme" class="bg-1">
-  <div class="container">
+  <div class="container-fluid">
     <h3 class="text-center">About Me</h3>
-        <div class="row">
-      <div class="col-md-8">
-        <p id="few-words"> FEW WORDS </p>
-        <p id="intro">I'm Aditya Vishwekar, software engineer and designer, working in web development and database design. If you have a project that needs to be professional engineered then that’s where I come in! <br>
-        My job is to build your website or software so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My goal is to help you succed in respective venture.
-        </p>
-      </div>
-        <div class="col-md-4">
-              <img class="img-responsive" class="bottom" src="images/logo.gif" alt="DisplayImage" />
+      <div class="row">
+        <div class="col-md-8">
+          <p id="few-words"> FEW WORDS </p>
+          <p id="intro">I'm Aditya Vishwekar, software engineer and designer, working in web development and database design. If you have a project that needs to be professionally engineered then that’s where I come in! <br>
+          My job is to build your website or software so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My goal is to help you succed in respective venture.
+          </p>
+          <iframe id="barGraph" class="col-md-12" src="sample/single-seriese-chart.php" style="border:none;"></iframe>
         </div>
+        <div class="col-md-4" >
+              <img onmouseover="rotateDIV()" id="rotate2D" class="img-responsive img-circle" class="bottom" src="images/agile-lifecycle.png" alt="DisplayImage2" />
+              <br>
+              <button name="button" class="btn btn-responsive" style="border:none; padding: 0px">
+              <a target="_blank" href="https://www.twitter.com">
+              <img class="floating-box" class="img-responsive img-circle" class="bottom" src="images/57x57/twitter.png" alt="twitter" style="border:none;"/></a></button>
+
+              <button name="button" class="btn btn-responsive" style="border:none; padding: 0px">
+              <a target="_blank" href="https://www.facebook.com/aditya.vishwekar.7">
+              <img class="floating-box" class="img-responsive img-circle" class="bottom" src="images/57x57/facebook.png" alt="facebook" style="border:none;"/></a></button>
+
+              <button name="button" class="btn btn-responsive" style="border:none; padding: 0px">
+              <a target="_blank" href="https://in.linkedin.com/in/adityavishwekar">
+              <img class="floating-box" class="img-responsive img-circle" class="bottom" src="images/57x57/linkedin.png" alt="linkedin" style="border:none;"/></a></button>
+
+              <button name="button" class="btn btn-responsive" style="border:none; padding: 0px">
+              <a target="_blank" href="https://plus.google.com/">
+              <img class="floating-box" class="img-responsive img-circle" class="bottom" src="images/57x57/googleplus.png" alt="googleplus" style="border:none;"/></a></button>
+
+              <button name="button" class="btn btn-responsive" style="border:none; padding: 0px">
+              <a target="_blank" href="https://www.flickr.com/">
+              <img class="floating-box" class="img-responsive img-circle" class="bottom" src="images/57x57/flickr.png" alt="flickr" style="border:none;"/></a></button>
+
+              <button name="button" class="btn btn-responsive" style="border:none; padding: 0px">
+              <a target="_blank" href="https://www.instagram.com/?hl=en">
+              <img class="floating-box" class="img-responsive img-circle" class="bottom" src="images/57x57/instagram.png" alt="instagram" style="border:none;"/></a></button>
+        </div>
+      </div>
+      <div class="row">
       </div>
   </div>
 </div>
@@ -234,15 +303,15 @@ function enableScrolling() {
 <!-- Container (Game Section) -->
 <div id="games" class="container-fluid" >
   <h3 class="text-center">Games</h3>
-      <div class="alert alert-info">
-      <center><strong>Info!</strong>Please disable the scrolling to play games!! (You can find disable button at the end of page).</center>
-    </div>
+  <span class="blink">
+      <center><strong>Info!</strong>Please disable the scrolling to play games!!</center>
+    </span>
   <div class="row" id="game-row">
     <div class="col-md-8">
       <iframe id="game1" src="http://hexgl.bkcore.com/play/" class="col-md-12" style="border:none;"></iframe>
     </div>
     <div class="col-md-4">
-      <iframe src="http://www.cross-code.com/en/start" style="border:none;"></iframe>
+      <iframe id="game2" src="http://www.cross-code.com/en/start" style="border:none;"></iframe>
     </div>
   </div>
 </div>
@@ -356,6 +425,15 @@ alert(result);
 }
 return false;
 });
+});
+
+$(document).ready(function(){
+  $('.slider1').bxSlider({
+    slideWidth: 200,
+    minSlides: 2,
+    maxSlides: 3,
+    slideMargin: 10
+  });
 });
 
 </script>
